@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HopNet — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 2rem 1.2rem 4rem; color: #1a1a1a; }
+  @media (prefers-color-scheme: dark) { body { background:#0e0f12; color:#eee; } a{color:#6db3ff;} }
+  h1 { font-size: 1.9rem; margin-bottom: .2rem; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  .meta { color: #777; font-size: .9rem; margin-bottom: 1.5rem; }
+  .lead { font-size: 1.05rem; }
+  ul { padding-left:1.2rem; }
+  nav { margin-top:3rem; padding-top:1.2rem; border-top:1px solid rgba(127,127,127,.25); font-size:.95rem; }
+  nav a { margin-right:1.2rem; }
+  footer { margin-top: 1.4rem; font-size: .85rem; color: #888; }
+</style>
+</head>
+<body>
+<h1>HopNet — Privacy Policy</h1>
+<p class="meta">Effective date: 18 June 2026 · Contact: <a href="mailto:privacy@hopnetapp.com">privacy@hopnetapp.com</a></p>
+
+<p class="lead">HopNet is a private, end-to-end-encrypted messenger with
+<strong>no accounts and no phone number</strong>. You add contacts in person by
+scanning their QR code — there is no random matching and no stranger chat. Your
+messages go directly between devices whenever possible; when your contact is offline,
+your message waits — still fully encrypted and unreadable to anyone — in a temporary
+"blind mailbox" until they reconnect. We <strong>cannot read your messages, your
+contacts, or who you talk to</strong>: the only thing that ever leaves your phone is
+encrypted data that no one, including us and our infrastructure providers, holds the
+keys to.</p>
+
+<h2>What we collect</h2>
+<p><strong>We do not collect personal information.</strong> HopNet has no accounts,
+asks for no phone number or email, and contains <strong>no analytics, no advertising,
+and no trackers</strong>. We do not run servers that can read your data. We use one
+piece of rented infrastructure — a <strong>blind mailbox</strong> (see "How messages
+travel") — which by design holds only <strong>encrypted data it cannot decrypt</strong>,
+briefly, and which we cannot use to identify you or map who you talk to.</p>
+
+<h2>What stays on your device</h2>
+<p>All of your data is stored locally on your phone: your identity keys (in secure
+storage), your contacts (added by scanning QR codes), your message history
+(encrypted at rest), and a local diagnostics log (visible in Settings → Engine
+Debug) that stays on your device unless you choose to share it. You can erase all of
+it at any time with <strong>Settings → Clear All Data</strong>.</p>
+
+<h2>How messages travel</h2>
+<p>HopNet connects your device directly to your contacts' devices over a
+peer-to-peer network. Messages are end-to-end encrypted (X3DH key agreement and the
+Double Ratchet, using standard algorithms) so only you and your contact can read
+them.</p>
+<p>Because connections are peer-to-peer, please understand that <strong>your IP
+address is visible to peers you connect to</strong>, and is used by the distributed
+hash table (DHT) to help devices find each other. This is inherent to peer-to-peer
+networking, the same as other such apps. If you need to hide your IP address, use a
+VPN or Tor. Other participants in the network can observe connection metadata as in
+any peer-to-peer system.</p>
+
+<h2>The blind mailbox (offline delivery)</h2>
+<p>If your contact's app is closed when you send, your phone also places the message
+in a temporary <strong>blind mailbox</strong> so it arrives the next time they open
+the app — without both of you needing to be online at the same moment. The mailbox is
+hosted for us by <strong>Cloudflare</strong> (acting as a processor). It is "blind"
+because:</p>
+<ul>
+<li>It stores <strong>only the already end-to-end-encrypted message</strong>
+(ciphertext). The decryption keys exist solely on your and your contact's devices —
+the mailbox, Cloudflare, and HopNet <strong>cannot read the contents</strong>.</li>
+<li>Messages are filed under <strong>random identifiers</strong> not linked to you,
+your contact, or your identity keys — so the mailbox <strong>cannot tell who is
+messaging whom</strong>.</li>
+<li>Stored items are <strong>padded to a fixed size</strong> (so their length reveals
+nothing) and are <strong>automatically deleted after at most 30 days</strong>, and
+sooner once delivered.</li>
+<li>Direct device-to-device delivery is always tried first; the mailbox is only a
+fallback for offline delivery.</li>
+</ul>
+<p>What the mailbox/Cloudflare can technically observe is limited to encrypted blobs,
+their padded sizes, timestamps, the random box identifiers, and the IP address making
+the request — never message content, your identity, or your social graph.</p>
+
+<h2>Permissions the app may request</h2>
+<p><strong>Camera</strong> — to scan a contact's QR code (and, in future,
+photo/video). <strong>Microphone</strong> — for future voice/video calls (not yet
+active). <strong>Photo library</strong> — to share photos/videos you choose. These
+are used only for the stated purpose, on your device.</p>
+
+<h2>Crash &amp; diagnostic data</h2>
+<p>The app keeps a local diagnostic log on your device to help with debugging. If you
+use <strong>Settings → Send Feedback</strong> to send a bug report, your message (and,
+if you leave the toggle on, your app/OS version) is sent by your own email app to
+<a href="mailto:support@hopnetapp.com">support@hopnetapp.com</a> — only when you tap
+send. Separately, if you have Apple's "Share With App Developers" analytics turned on,
+Apple may share crash reports with the developer per Apple's own policy.</p>
+
+<h2>Children</h2>
+<p>HopNet is intended for users aged 17 and older and is not directed to children.</p>
+
+<h2>Changes</h2>
+<p>We may update this policy; the "effective date" above will change. Material changes
+will be noted in-app or in release notes.</p>
+
+<h2>Contact</h2>
+<p>Questions about privacy: <a href="mailto:privacy@hopnetapp.com">privacy@hopnetapp.com</a>.</p>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms &amp; Safety</a>
+  <a href="mailto:support@hopnetapp.com">Contact</a>
+</nav>
+<footer>HopNet is in active development (research preview). © 2026 DTT.</footer>
+</body>
+</html>
