@@ -21,7 +21,7 @@
 </head>
 <body>
 <h1>HopNet — Privacy Policy</h1>
-<p class="meta">Effective date: 18 June 2026 · Contact: <a href="mailto:privacy@hopnetapp.com">privacy@hopnetapp.com</a></p>
+<p class="meta">Effective date: 26 June 2026 · Contact: <a href="mailto:privacy@hopnetapp.com">privacy@hopnetapp.com</a></p>
 
 <p class="lead">HopNet is a private, end-to-end-encrypted messenger with
 <strong>no accounts and no phone number</strong>. You add contacts in person by
@@ -82,6 +82,27 @@ fallback for offline delivery.</li>
 <p>What the mailbox/Cloudflare can technically observe is limited to encrypted blobs,
 their padded sizes, timestamps, the random box identifiers, and the IP address making
 the request — never message content, your identity, or your social graph.</p>
+
+<h2>Adding contacts &amp; invite links</h2>
+<p>The most private way to add a contact is to <strong>scan their QR code in
+person</strong> — that exchange never touches any server. For convenience you can
+also share an <strong>invite link</strong>. An invite link carries only your
+<strong>public</strong> contact information — your display name and public keys (the
+same data the QR shows). It never contains your private keys or any message, and it
+cannot be used to read your messages or impersonate you.</p>
+<p>By default the invite link is a short, tappable web link: when created, your public
+contact bundle is stored briefly by our blind-mailbox provider (Cloudflare) under a
+random identifier and auto-deleted within 30 days. As a result, for invite links the
+provider can observe that an invite was created and opened, the requester's IP, and
+your <strong>public</strong> identity — metadata about an introduction, never message
+content, private keys, or who you message over time. If you prefer that invites never
+touch our server, turn on <strong>Settings → Private invite links</strong>; the link
+then carries its data only in the part of the URL browsers never send to a server, and
+the recipient pastes it instead of tapping.</p>
+<p>Either way, treat an invite link like a key to your front door: <strong>anyone who
+obtains it</strong> — including anyone the link is forwarded to or who sees it in a
+chat or screenshot — can add you and see your public profile until it expires. Share it
+only with people you want to be able to reach you.</p>
 
 <h2>Permissions the app may request</h2>
 <p><strong>Camera</strong> — to scan a contact's QR code (and, in future,
